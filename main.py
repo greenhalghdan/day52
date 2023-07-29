@@ -14,7 +14,7 @@ MAX_FOLLOWS = 15
 class InstaFollower():
     def __init__(self):
         self.chrome_options = webdriver.ChromeOptions()
-        #self.chrome_options.add_argument("--headless=True")
+        self.chrome_options.add_argument("--headless=True")
         self.chrome_options.add_experimental_option("detach", True)
         self.chrome_web_driver = Service(r"C:\Users\green\Downloads\chromedriver_win32\chromedriver.exe")
         self.driver = webdriver.Chrome(service=self.chrome_web_driver, options=self.chrome_options)
